@@ -1,5 +1,5 @@
 # -*- coding: utf8 -*-
-from __future__ import unicode_literals
+
 import unittest
 import re
 import sys
@@ -10,7 +10,7 @@ from fuzzywuzzy import utils
 from fuzzywuzzy.string_processing import StringProcessor
 
 if sys.version_info[0] == 3:
-    unicode = str
+    str = str
 
 if sys.version_info[:2] == (2, 6):
     # Monkeypatch to make tests work on 2.6
@@ -155,10 +155,10 @@ class RatioTest(unittest.TestCase):
         self.assertEqual(fuzz.WRatio(self.s4, self.s5), 95)
 
     def testWRatioUnicode(self):
-        self.assertEqual(fuzz.WRatio(unicode(self.s1), unicode(self.s1a)), 100)
+        self.assertEqual(fuzz.WRatio(str(self.s1), str(self.s1a)), 100)
 
     def testQRatioUnicode(self):
-        self.assertEqual(fuzz.WRatio(unicode(self.s1), unicode(self.s1a)), 100)
+        self.assertEqual(fuzz.WRatio(str(self.s1), str(self.s1a)), 100)
 
     def testEmptyStringsScore0(self):
         self.assertEqual(fuzz.ratio("", ""), 0)

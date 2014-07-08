@@ -24,10 +24,10 @@ LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
-from __future__ import unicode_literals
+
 
 try:
-    from StringMatcher import StringMatcher as SequenceMatcher
+    from .StringMatcher import StringMatcher as SequenceMatcher
 except:
     from difflib import SequenceMatcher
 
