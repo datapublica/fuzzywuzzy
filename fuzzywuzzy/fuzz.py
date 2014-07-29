@@ -26,10 +26,10 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
 
 
-try:
-    from .StringMatcher import StringMatcher as SequenceMatcher
-except:
-    from difflib import SequenceMatcher
+#try:
+#    from .StringMatcher import StringMatcher as SequenceMatcher
+#except:
+from difflib import SequenceMatcher
 
 from . import utils
 
